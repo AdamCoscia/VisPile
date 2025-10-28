@@ -1,7 +1,7 @@
 # VisPile
 
 [![license](https://img.shields.io/badge/License-Apache--2.0-454295)](https://github.com/AdamCoscia/VisPile/blob/main/LICENSE)
-[![arxiv badge](https://img.shields.io/badge/arXiv-2403.04761-red)](https://arxiv.org/abs/2510.09605)
+[![arxiv badge](https://img.shields.io/badge/arXiv-2510.09605-red)](https://arxiv.org/abs/2510.09605)
 
 Analyze unstructured text data with LLMs and Knowledge Graphs! 🕵️
 
@@ -98,7 +98,7 @@ cd server
 
 Download the data:
 
-- Download [data.zip](https://drive.google.com/file/d/1PzvYBNud8lFuBIRDxpb6AlEU235l9Hwz/view?usp=sharing)
+- Download [data.zip](https://drive.google.com/file/d/1SWyPWpJ06rd1_oDcwITPO8ddpwRQYUo6/view?usp=sharing)
 - Move into the [server/data](server/data/) directory
 - Unzip the file
 - You should see 3 new folders in [server/data](server/data/): `News Articles/`, `embeddings/`, and `models/`
