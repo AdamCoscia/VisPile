@@ -1,0 +1,256 @@
+[
+  {
+    "title": "GPT-4.1",
+    "value": "gpt-4.1",
+    "type": "openai",
+    "allowed": true,
+    "task": null,
+    "tasks": [
+      {
+        "title": "Analyze documents",
+        "value": "analyze",
+        "prompt": {
+          "single": "You are a helpful assistant for analyzing a single document.\nYou will be provided a single document.\nYour task is to analyze the document as if you are a professional intelligence analyst. You MUST cite (1) how you used the document for analysis in your response.",
+          "multiple": "You are a helpful assistant for analyzing multiple documents.\nYou will be provided multiple documents.\nYour task is to analyze the documents as if you are a professional intelligence analyst. You MUST cite (1) which documents you used for analysis and (2) how you used the documents in your response."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Summarize events",
+        "value": "summarize",
+        "prompt": {
+          "single": {
+            "concise": "You are a helpful assistant summarizing a single document.\nYou will be provided a single document.\nIn clear and concise language, summarize the main events that are described in the document. Start your response by saying 'This document'. Return your response in a single sentence.",
+            "verbose": "You are a helpful assistant summarizing a single document.\nYou will be provided a single document.\nIn clear and concise language, summarize the key points, themes, and events described in the document."
+          },
+          "multiple": {
+            "concise": "You are a helpful assistant summarizing multiple documents.\nYou will be provided multiple documents.\nIn clear and concise language, summarize the main events that are described across all of the documents. Start your response by saying 'The documents'. Return your response in a single sentence.",
+            "verbose": "You are a helpful assistant summarizing multiple documents.\nYou will be provided multiple documents.\nIn clear and concise language, summarize the key points, themes, and events described in each document."
+          }
+        },
+        "settings": {
+          "summary_length": "concise",
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Extract entities",
+        "value": "extract_entities",
+        "prompt": {
+          "single": {
+            "person": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"people\". You MUST use ONLY the provided document. You will NOT use any other source of information.",
+            "location": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"location\". You MUST use ONLY the provided document. You will NOT use any other source of information.",
+            "organization": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"organization\". You MUST use ONLY the provided document. You will NOT use any other source of information.",
+            "datetime": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"datetime\". You MUST use ONLY the provided document. You will NOT use any other source of information."
+          },
+          "multiple": {
+            "person": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"person\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response.",
+            "location": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"location\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response.",
+            "organization": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"organization\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response.",
+            "datetime": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"datetime\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response."
+          }
+        },
+        "settings": {
+          "entity": "person",
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Classify topics",
+        "value": "classify_topics",
+        "prompt": {
+          "single": "You are a helpful assistant for classifying the topics of a single document.\nYou will be provided a single document.\nYour task is to classify the topics of the document. For each topic, please list two items: (1) the name of the topic; and (2) a short description of the topic.",
+          "multiple": "You are a helpful assistant for classifying the topics of multiple documents.\nYou will be provided multiple documents.\nYour task is to classify the topics in each document. For each topic, please list three items: (1) the name of the topic; (2) a short description of the topic; and (3) which documents the topic belongs to."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Generate questions",
+        "value": "generate_questions",
+        "prompt": {
+          "single": "You are a helpful assistant for synthesizing analytic questions to ask about a single document.\nYou will be provided a single document.\nYour task is to synthesize analytic questions to ask about the document as if you are a professional intelligence analyst. You MUST cite how you used the document to synthesize the questions in your response.",
+          "multiple": "You are a helpful assistant for synthesizing analytic questions to ask about multiple documents.\nYou will be provided multiple documents.\nYour task is to synthesize analytic questions to ask about the documents as if you are a professional intelligence analyst. You MUST cite (1) which documents you used to synthesize the questions and (2) how you used the documents in your response."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "List tasks",
+        "value": "generate_tasks",
+        "prompt": {
+          "single": "You are a helpful assistant for synthesizing analytic tasks to perform with a single document.\nYou will be provided a single document.\nYour task is to synthesize analytic tasks to perform with the document as if you are a professional intelligence analyst. You MUST cite how you used the document to synthesize the tasks in your response.",
+          "multiple": "You are a helpful assistant for synthesizing analytic tasks to ask about multiple documents.\nYou will be provided multiple documents.\nYour task is to synthesize analytic tasks to ask about the documents as if you are a professional intelligence analyst. You MUST cite (1) which documents you used to synthesize the tasks and (2) how you used the documents in your response."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Explain concepts",
+        "value": "explain_concepts",
+        "prompt": {
+          "single": "You are a helpful assistant for explaining concepts using a single document.\nYou will be provided a single document.\nYour task is to use the document to explain the following concepts: {concepts}. You MUST use ONLY the provided document. You will NOT use any other source of information.",
+          "multiple": "You are a helpful assistant for explaining concepts using multiple documents.\nYou will be provided multiple documents.\nYour task is to use the documents to explain the following concepts: {concepts}. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents you used to explain each concept in your response."
+        },
+        "settings": {
+          "concepts": [],
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Answer questions",
+        "value": "answer_questions",
+        "prompt": {
+          "single": "You are a helpful assistant for answering questions using a single document.\nYou will be provided a single document.\nYour task is to use the document to answer the following questions: {questions}. You MUST use ONLY the provided document. You will NOT use any other source of information. Please explain how you used the provided document in your response.",
+          "multiple": "You are a helpful assistant for answering questions using multiple documents.\nYou will be provided multiple documents.\nYour task is to use the documents to answer the following questions: {questions}. You MUST use ONLY the provided documents. You will NOT use any other source of information. Please explain how you used the provided documents in your response."
+        },
+        "settings": {
+          "questions": [],
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Custom prompt",
+        "value": "custom",
+        "settings": {
+          "prompt": ""
+        }
+      }
+    ],
+    "settings": {
+      "temperature": 0.2
+    }
+  },
+  {
+    "title": "GPT-3.5 Turbo",
+    "value": "gpt-3.5-turbo",
+    "type": "openai",
+    "allowed": true,
+    "task": null,
+    "tasks": [
+      {
+        "title": "Analyze documents",
+        "value": "analyze",
+        "prompt": {
+          "single": "You are a helpful assistant for analyzing a single document.\nYou will be provided a single document.\nYour task is to analyze the document as if you are a professional intelligence analyst. You MUST cite (1) how you used the document for analysis in your response.",
+          "multiple": "You are a helpful assistant for analyzing multiple documents.\nYou will be provided multiple documents.\nYour task is to analyze the documents as if you are a professional intelligence analyst. You MUST cite (1) which documents you used for analysis and (2) how you used the documents in your response."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Summarize events",
+        "value": "summarize",
+        "prompt": {
+          "single": {
+            "concise": "You are a helpful assistant summarizing a single document.\nYou will be provided a single document.\nIn clear and concise language, summarize the main events that are described in the document. Start your response by saying 'This document'. Return your response in a single sentence.",
+            "verbose": "You are a helpful assistant summarizing a single document.\nYou will be provided a single document.\nIn clear and concise language, summarize the key points, themes, and events described in the document."
+          },
+          "multiple": {
+            "concise": "You are a helpful assistant summarizing multiple documents.\nYou will be provided multiple documents.\nIn clear and concise language, summarize the main events that are described across all of the documents. Start your response by saying 'The documents'. Return your response in a single sentence.",
+            "verbose": "You are a helpful assistant summarizing multiple documents.\nYou will be provided multiple documents.\nIn clear and concise language, summarize the key points, themes, and events described in each document."
+          }
+        },
+        "settings": {
+          "summary_length": "concise",
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Extract entities",
+        "value": "extract_entities",
+        "prompt": {
+          "single": {
+            "person": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"people\". You MUST use ONLY the provided document. You will NOT use any other source of information.",
+            "location": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"location\". You MUST use ONLY the provided document. You will NOT use any other source of information.",
+            "organization": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"organization\". You MUST use ONLY the provided document. You will NOT use any other source of information.",
+            "datetime": "You are a helpful assistant for extracting all entities from a single document.\nYou will be provided a single document.\nYour task is to extract all entities of the following type: \"datetime\". You MUST use ONLY the provided document. You will NOT use any other source of information."
+          },
+          "multiple": {
+            "person": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"person\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response.",
+            "location": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"location\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response.",
+            "organization": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"organization\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response.",
+            "datetime": "You are a helpful assistant for extracting all entities from multiple documents.\nYou will be provided multiple documents.\nYour task is to extract all entities of the following type: \"datetime\". If multiple documents contain multiple entities, list all documents that entity is described in. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents each entity was extracted from in your response."
+          }
+        },
+        "settings": {
+          "entity": "person",
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Classify topics",
+        "value": "classify_topics",
+        "prompt": {
+          "single": "You are a helpful assistant for classifying the topics of a single document.\nYou will be provided a single document.\nYour task is to classify the topics of the document. For each topic, please list two items: (1) the name of the topic; and (2) a short description of the topic.",
+          "multiple": "You are a helpful assistant for classifying the topics of multiple documents.\nYou will be provided multiple documents.\nYour task is to classify the topics in each document. For each topic, please list three items: (1) the name of the topic; (2) a short description of the topic; and (3) which documents the topic belongs to."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Generate questions",
+        "value": "generate_questions",
+        "prompt": {
+          "single": "You are a helpful assistant for synthesizing analytic questions to ask about a single document.\nYou will be provided a single document.\nYour task is to synthesize analytic questions to ask about the document as if you are a professional intelligence analyst. You MUST cite how you used the document to synthesize the questions in your response.",
+          "multiple": "You are a helpful assistant for synthesizing analytic questions to ask about multiple documents.\nYou will be provided multiple documents.\nYour task is to synthesize analytic questions to ask about the documents as if you are a professional intelligence analyst. You MUST cite (1) which documents you used to synthesize the questions and (2) how you used the documents in your response."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "List tasks",
+        "value": "generate_tasks",
+        "prompt": {
+          "single": "You are a helpful assistant for synthesizing analytic tasks to perform with a single document.\nYou will be provided a single document.\nYour task is to synthesize analytic tasks to perform with the document as if you are a professional intelligence analyst. You MUST cite how you used the document to synthesize the tasks in your response.",
+          "multiple": "You are a helpful assistant for synthesizing analytic tasks to ask about multiple documents.\nYou will be provided multiple documents.\nYour task is to synthesize analytic tasks to ask about the documents as if you are a professional intelligence analyst. You MUST cite (1) which documents you used to synthesize the tasks and (2) how you used the documents in your response."
+        },
+        "settings": {
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Explain concepts",
+        "value": "explain_concepts",
+        "prompt": {
+          "single": "You are a helpful assistant for explaining concepts using a single document.\nYou will be provided a single document.\nYour task is to use the document to explain the following concepts: {concepts}. You MUST use ONLY the provided document. You will NOT use any other source of information.",
+          "multiple": "You are a helpful assistant for explaining concepts using multiple documents.\nYou will be provided multiple documents.\nYour task is to use the documents to explain the following concepts: {concepts}. You MUST use ONLY the provided documents. You will NOT use any other source of information. You MUST cite which documents you used to explain each concept in your response."
+        },
+        "settings": {
+          "concepts": [],
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Answer questions",
+        "value": "answer_questions",
+        "prompt": {
+          "single": "You are a helpful assistant for answering questions using a single document.\nYou will be provided a single document.\nYour task is to use the document to answer the following questions: {questions}. You MUST use ONLY the provided document. You will NOT use any other source of information. Please explain how you used the provided document in your response.",
+          "multiple": "You are a helpful assistant for answering questions using multiple documents.\nYou will be provided multiple documents.\nYour task is to use the documents to answer the following questions: {questions}. You MUST use ONLY the provided documents. You will NOT use any other source of information. Please explain how you used the provided documents in your response."
+        },
+        "settings": {
+          "questions": [],
+          "instructions": ""
+        }
+      },
+      {
+        "title": "Custom prompt",
+        "value": "custom",
+        "settings": {
+          "prompt": ""
+        }
+      }
+    ],
+    "settings": {
+      "temperature": 0.2
+    }
+  }
+]
