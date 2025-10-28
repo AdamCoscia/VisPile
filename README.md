@@ -1,6 +1,6 @@
 # VisPile
 
-[![license](https://img.shields.io/badge/License-Apache--2.0-454295)](https://github.com/AdamCoscia/VisPile/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/License-MIT-A54046)](https://github.com/AdamCoscia/VisPile/blob/main/LICENSE)
 [![arxiv badge](https://img.shields.io/badge/arXiv-2510.09605-red)](https://arxiv.org/abs/2510.09605)
 
 Analyze unstructured text data with LLMs and Knowledge Graphs! 🕵️
